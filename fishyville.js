@@ -119,26 +119,6 @@ houses.forEach((house, index) => {
   console.log("---------------------");
 });
 
-// Function to change the time of day to night
-function changeToNight() {
-  console.log("It's nighttime in Fishyville. Everyone is going to bed...");
-  people.forEach((person) => {
-    person.isAwake = false;
-  });
-}
-
-// Function to simulate a person waking up in the morning
-function wakeUp(person) {
-  console.log(`${person.name} ${person.lastName} is waking up in the morning...`);
-  person.isAwake = true;
-}
-
-// Function to simulate a person going to bed at night
-function goToBed(person) {
-  console.log(`${person.name} ${person.lastName} is going to bed...`);
-  person.isAwake = false;
-}
-
 
 // Function to increase everyone's money by 250 units on payday
 function payDay() {
@@ -241,20 +221,6 @@ document.getElementById("changeSeasonBtn").addEventListener("click", function ()
   updateDescription(`It's now ${currentSeason} in Fishyville.`);
 });
 
-document.getElementById("changeToNightBtn").addEventListener("click", function () {
-  changeToNight();
-  updateDescription("It's nighttime in Fishyville. Everyone is going to bed.");
-});
-
-document.getElementById("goToBedBtn").addEventListener("click", function () {
-  goToBed(people[1]);
-  updateDescription("Jack Fisher is going to bed.");
-});
-
-document.getElementById("wakeUpBtn").addEventListener("click", function () {
-  wakeUp(people[0]);
-  updateDescription("Charlie Fisher is waking up in the morning.");
-});
 
 
 // Function to play the background music on page load
@@ -305,9 +271,6 @@ function updateDateEverySecond() {
     dateElement.textContent = displayDate(currentDate);
   }, 1000);
 }
-
-// Play the background music when the website opens
-window.addEventListener("load", playBackgroundMusic);
 
 // Update the date every second
 updateDateEverySecond();
@@ -376,7 +339,7 @@ function boomPeople() {
   updateDescription("Everyone is dead!");
 
   // Change the background to the fire-elmo.gif
-  document.body.style.backgroundImage = "url('https://media.tenor.com/Ivb2PnLZzsUAAAAC/fire-elmo.gif')";
+  document.body.style.backgroundImage = "url('https://gifdb.com/images/high/earth-exploding-boom-explosion-clouds-cartoon-lc4pn901xd9w7k0b.gif')";
   document.body.style.backgroundSize = "cover";
   document.body.style.backgroundRepeat = "no-repeat";
   document.body.style.backgroundPosition = "center";
@@ -385,3 +348,82 @@ function boomPeople() {
 // Event listener for the "💣BOOM💣" button
 const boomButton = document.getElementById("BoomBtn");
 boomButton.addEventListener("click", boomPeople);
+
+
+// Function to play the music
+function playMusic() {
+  const audio = new Audio("music.mp3");
+  audio.play();
+}
+
+// Event listener for the "Play Music" button
+const playMusicButton = document.getElementById("playMusicBtn");
+playMusicButton.addEventListener("click", playMusic);
+
+// Global variable to store the currently playing audio
+let currentAudio = null;
+
+// Function to play the "music.mp3" audio
+function playMusic() {
+  if (currentAudio) {
+    currentAudio.pause();
+  }
+  const audio = new Audio("music.mp3");
+  audio.play();
+  currentAudio = audio;
+}
+
+// Function to play the "music2.mp3" audio
+function playMusic2() {
+  if (currentAudio) {
+    currentAudio.pause();
+  }
+  const audio = new Audio("music2.mp3");
+  audio.play();
+  currentAudio = audio;
+}
+
+// Function to change the background to night and display the sleep message
+function changeToNightMode() {
+  // Change the background to the night gif
+  document.body.style.backgroundImage = "url('https://media.tenor.com/R2zqycugcuQAAAAC/pixel-night.gif')";
+  document.body.style.backgroundSize = "cover";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundPosition = "center";
+
+  // Pause the "music.mp3" audio
+  if (currentAudio) {
+    currentAudio.pause();
+  }
+
+  // Play the "music2.mp3" audio
+  playMusic2();
+
+  // Display the sleep message in the description div
+  updateDescription("Everyone in Fishyville is fast asleep 💤", "description2");
+}
+
+// Function to change the background to the original URL and display the wake-up message
+function changeToDayMode() {
+  // Change the background back to the original URL
+  document.body.style.backgroundImage = "url('https://i.redd.it/z8rmqihs77391.gif')";
+
+  // Pause the "music2.mp3" audio
+  if (currentAudio) {
+    currentAudio.pause();
+  }
+
+  // Play the "music.mp3" audio
+  playMusic();
+
+  // Display the wake-up message in the description div
+  updateDescription("Everyone in Fishyville is well rested and ready for the day!", "description2");
+}
+
+// Event listener for the "🌙" button
+const nightModeButton = document.getElementById("NightModeBtn");
+nightModeButton.addEventListener("click", changeToNightMode);
+
+// Event listener for the "☀️" button
+const dayModeButton = document.getElementById("DayModeBtn");
+dayModeButton.addEventListener("click", changeToDayMode);
