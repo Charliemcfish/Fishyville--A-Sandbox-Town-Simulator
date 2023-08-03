@@ -16,6 +16,7 @@ body {
     max-width: 100%;
     
     
+    
 }
   
   h1 {
@@ -31,6 +32,7 @@ body {
     border:rgba(76, 175, 80, 0.8)
     cursor: pointer;
     border-radius: 5px;
+    
    
   }
   
@@ -87,16 +89,21 @@ body {
   /* Media queries for responsiveness */
 
 /* Adjust the banner images for smaller screens */
-@media (max-width: 768px) {
-    #banner1, #banner2 {
-      width: 100%;
-      height: auto;
-    }
-  }
+
   
   /* Adjust the peopleInfo container for smaller screens */
   @media (max-width: 600px) {
     #peopleInfo {
       max-width: 90%;
     }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
+    padding: 6px 12px;
   }
