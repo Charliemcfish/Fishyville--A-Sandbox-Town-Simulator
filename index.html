@@ -1,115 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CFIndustries - Coding Solutions</title>
-
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-
 <body>
+    <img id="banner" src="fishyville.png" alt="Fishyville Banner">  
+    <p>Current Date: <span id="currentDate"></span></p>
+    
 
-	<header>
-		<h2><a href="logo">CFIndustries</a></h2>
-		<nav>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Products</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Contacts</a></li>
-		</nav>
-	</header>
+<!-- Buttons to activate functions -->
+<button id="sendToWorkBtn">Send to Work</button>
+<button id="goShoppingBtn">Go Shopping</button>
+<button id="hostPartyBtn">Host a Party</button>
+<button id="visitHouseBtn">Visit a House</button>
+<button id="payDayBtn">Payday</button>
+<button id="BankruptBtn">Bankrupt</button>
+<button id="BoomBtn">💣BOOM💣</button>
+<button id="changeSeasonBtn">Change Season</button>
+<button id="changeToNightBtn">Change to Night</button>
+<button id="goToBedBtn">Go to Bed</button>
+<button id="wakeUpBtn">Wake Up</button>
 
-
-	<section class="hero">
-		<div class="background-image" style="background-image: url(https://media3.giphy.com/media/ZTAojHK9IHsSQ/giphy.gif);"></div>
-		<h1>Our company specializes in flexbox websites</h1>
-		<h3>How boring...</h3>
-		<a href="https://media.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif">Dont click this button (It Doesn't work!)</a>
-	</section>
-
-
-	<section class="our-work">
-		<h3 class="title">Meet the team</h3>
-		<hr>
-
-		<ul class="grid">
-			<li class="small" style="background-image: url(https://www.mandatory.com/wp-content/uploads/sites/10/2021/08/Fish.jpg);"></li>
-			<li class="large" style="background-image: url(https://images.csmonitor.com/csm/2010/02/02_65.jpg?alias=standard_900x600nc);"></li>
-			<li class="large" style="background-image: url(https://www.mediastorehouse.com/p/629/funny-fish-20996909.jpg.webp);"></li>
-			<li class="small" style="background-image: url(https://wallpapers.com/images/hd/funny-fish-upset-mouth-picture-ch2gx87d12t1cn9s.jpg);"></li>
-		</div>
-	</section>
-	
-
-	<section class="features">
-		<h3 class="title">Features and services</h3>
-		<p>1. I can write very basic code</p>
-		<hr>
-
-		<ul class="grid">
-			<li>
-				<i class="fa fa-camera-retro"></i>
-				<h4>Photography</h4>
-				<p>Want some cool pics of your night out? I got you.</p>
-			</li>
-			<li>
-				<i class="fa fa-cubes"></i>
-				<h4>Web Development</h4>
-				<p>This website speaks for itself. Very nice flexbox and responsive website design. </p>
-			</li>
-			<li>
-				<i class="fa fa-newspaper-o"></i>
-				<h4>Content Editing</h4>
-				<p></p>
-			</li>
-		</div>
-	</section>
+    <audio id="backgroundMusic" loop>
+        <source src="music" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio> 
 
 
-	<section class="reviews">
-		<h3 class="title">What others say:</h3>
+    <!-- Description Placeholder -->
+    <div id="description"></div>
 
-		<p class="quote">Dont pay this guy, he should be paying us for these bad websites.</p>
-		<p class="author">— Patrick</p>
+      <!-- People Information -->
+<div id="peopleInfo"></div>
 
-		<p class="quote">Very good work.</p>
-		<p class="author">— George Smith</p>
-
-		<p class="quote">Masterpiece. Resize the page and look how responsive that is!!! :D</p>
-		<p class="author">— Kevin Blake</p>
-
-		
-	</section>
-
-
-	<section class="contact">
-		<h3 class="title">Join our newsletter</h3>	
-		<p></p>
-		<hr>
-
-		<form>
-			<input type="email" placeholder="Email">
-			<a href="#" class="btn">Subscribe now</a>
-		</form>
-	</section>
-
-	<footer>
-		<ul>
-			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
-			<li><a href="#"><i class="fa fa-github-square""></i></a></li>
-		</ul>
-		<p>Made by Charlie </p>
-	</footer>
-
+    <!-- Script to load the JavaScript code -->
+    <script src="fishyville.js"></script>
 </body>
-
 </html>
