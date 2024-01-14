@@ -14,7 +14,8 @@ Witness the daily routines of the residents, from waking up in the morning to go
 
 
 **Diverse Characters**
-**Interact with a diverse cast of characters, each with their own names, professions, and stories.
+
+nteract with a diverse cast of characters, each with their own names, professions, and stories.
 Experience the daily lives of people with occupations ranging from mayor and nurse to chef and student.
 
 
